@@ -1,0 +1,73 @@
+<!--edit-book-view.component.html-->
+<div class="container text-center">
+
+  <app-header></app-header>
+
+  <form #editBook="ngForm" (ngSubmit)="onSubmitEditBook()">
+
+    <div class="form-group">
+      <label for="bookName">
+        Nom du livre :
+      </label>
+      <input
+        type="text"
+        id="bookName"
+        class="form-control"
+        name="bookName"
+        [(ngModel)]="book.title"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="authorName">
+        Nom de l'auteur :
+      </label>
+      <input
+        type="text"
+        id="authorName"
+        class="form-control"
+        name="authorName"
+        [(ngModel)]="book.author"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookDesc">
+        Description du livre :
+      </label>
+      <textarea
+        id="bookDesc"
+        class="form-control"
+        name="bookDesc"
+        [(ngModel)]="book.desc"
+        maxlength="258"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="bookStatus">
+        État du livre
+      </label>
+      <select
+        id="bookStatus"
+        class="form-control"
+        name="bookStatus"
+        [(ngModel)]="book.status">
+        <option value="pris">Pris</option>
+        <option value="libre">Libre</option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="editBook.invalid">
+      Modifier !
+    </button>
+
+  </form>
+
+  <br>
+
+  <a routerLink="/books">Retour vers les livres</a>
+
+</div>

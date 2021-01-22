@@ -1,0 +1,30 @@
+<!--header.component.html-->
+<div class="container mx-auto my-2">
+
+  <h1 class="text-center">Books Manager !</h1>
+
+  <div class="d-flex justify-content-around">
+
+    <a routerLink="/book/new" class="text-white">
+      <button class="p-2 btn btn-dark">Ajouter un livre</button>
+    </a>
+
+    |
+
+    <a routerLink="/profil" class="text-white">
+      <button class="p-2 btn btn-dark">
+        Profil de {{user.firstname}}
+      </button>
+    </a>
+
+    |
+
+    <button
+      class="p-2 btn btn-dark"
+      (click)="onClickSignOut()">
+      Déconnexion
+    </button>
+
+  </div>
+
+</div>

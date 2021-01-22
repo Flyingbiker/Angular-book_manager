@@ -1,0 +1,26 @@
+<!--books-view.component.html-->
+<div class="container">
+
+  <app-header></app-header>
+
+  <div class="text-center">
+    <button
+      class="btn btn-dark"
+      (click)="onClickSwitchAllBooksStatus('libre')">
+      Tous libre
+    </button>
+    |
+    <button
+      class="btn btn-dark"
+      (click)="onClickSwitchAllBooksStatus('pris')">
+      Tous pris
+    </button>
+  </div>
+
+  <br>
+
+  <app-table
+    [data]="books"
+    [headers]="tableHeaders"></app-table>
+
+</div>

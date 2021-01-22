@@ -1,0 +1,28 @@
+<!--table-item.component.html-->
+<td *ngFor="let header of headers">
+
+  {{ item[header | lowercase] }}
+
+</td>
+<td>
+  <button
+    class="btn btn-dark"
+    (click)="onClickChangeBookStatus()">
+    Basculer l'état
+  </button>
+  <a
+    class="text-white"
+    [routerLink]="detailsUrl">
+    <button class="m-2 btn btn-primary">
+      Détails
+    </button>
+  </a>
+  <a
+    class="text-white"
+    [routerLink]="editUrl">
+    <button class="m-2 btn btn-warning">
+      Modifier
+    </button>
+  </a>
+</td>
+

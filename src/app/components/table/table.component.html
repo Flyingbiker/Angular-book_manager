@@ -1,0 +1,21 @@
+<!--table.component.html-->
+<table class="table">
+  <thead class="thead-dark">
+
+  <tr
+    app-table-head
+    [headers]="headers">
+  </tr>
+
+  </thead>
+  <tbody>
+
+  <tr
+    app-table-item
+    *ngFor="let item of data"
+    [item]="item"
+    [headers]="headers">
+  </tr>
+
+  </tbody>
+</table>
